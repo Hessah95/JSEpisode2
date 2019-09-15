@@ -19,22 +19,24 @@
 ****************************************************************/
 function pairs(names) {
   // Your code goes here
-  if (names) {
-    
-    if (names.length<=2){
-      return names
-    }
-    
-    for (random=0; random<names.length; random++){
-      let rand = names.getRandom();
-    }
-    
-    return (rand)
+  if (!names) return [];
+  // if (name.length === 0) return [];
+
+  let groups = [];
+  let firstName, secondName;
+
+  while (names.length > 1){
+    firstName = names.getRandom();
+    secondName = names.getRandom();
+    groups.push([firstName, secondName]);
+
   }
 
-  else if (names === []){
-    return []
+  if (names.length === 1) {
+    groups.push([names[0]]);
   }
+
+  return groups;
   
   return []
 }
