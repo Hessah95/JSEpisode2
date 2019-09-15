@@ -19,6 +19,26 @@
 ****************************************************************/
 function pairs(names) {
   // Your code goes here
+  if (names) {
+    
+    if (names.length<=2){
+      return names
+    }
+    
+    let rand = names.getRandom();
+    
+    var groups = [];
+    for(var i = 0; i < rand.length; i += 2){
+      groups.push(rand.slice(i, i + 2));
+    }
+    return (groups)
+  }
+
+  else if (names === []){
+    return []
+  }
+
+  return []
 }
 
 module.exports = pairs;
