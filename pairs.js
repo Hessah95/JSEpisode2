@@ -25,19 +25,17 @@ function pairs(names) {
       return names
     }
     
-    let rand = names.getRandom();
-    
-    var groups = [];
-    for(var i = 0; i < rand.length; i += 2){
-      groups.push(rand.slice(i, i + 2));
+    for (random=0; random<names.length; random++){
+      let rand = names.getRandom();
     }
-    return (groups)
+    
+    return (rand)
   }
 
   else if (names === []){
     return []
   }
-
+  
   return []
 }
 
